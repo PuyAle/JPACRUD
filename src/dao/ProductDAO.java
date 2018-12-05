@@ -5,7 +5,7 @@ import entities.Product;
 
 public interface ProductDAO {
 
-    //creates a object. 
+    //creates a object 
     void create(String name, double price);
 
     List<Product> getByName(String name);
@@ -17,11 +17,10 @@ public interface ProductDAO {
     List<Product> getAll();
 //returns all products
 
-    boolean updatePrice(int id, double newPrice);
-// set a new price for the product, return success/failure
-
-    boolean updateName (int id, String name);
+    void updatePrice(int id, double newPrice);
+// set a new price for the product
+    void updateName (int id, String name);
     //set a new name.
-    boolean remove(int id);
-// removes the product, return success/failure 
+    void remove(int id);
+// removes the product 
 }

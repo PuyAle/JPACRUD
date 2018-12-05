@@ -7,7 +7,7 @@ import entities.Product;
 public class UI {
 
     final static Scanner sc = new Scanner(System.in);
-
+//
     private static int choice;
 
     public static int menu() {
@@ -75,7 +75,11 @@ public class UI {
     }
 
     public void printList(List<Product> a) {
-        a.forEach(System.out::println);
+        if (a.isEmpty()) {
+            System.out.println("Is empty!");
+        } else {
+            a.forEach(System.out::println);
+        }
     }
 
     public int enterId() {

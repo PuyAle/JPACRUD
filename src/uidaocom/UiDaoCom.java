@@ -3,10 +3,10 @@ package uidaocom;
 import dao.ProductDAOImpl;
 import run.JPACRUD;
 import ui.UI;
-public class UiDaiCom {
+public class UiDaoCom {
     
     
-    
+  //  
     
     public static void DBUIConnection(int i){
        ProductDAOImpl db = new ProductDAOImpl();
@@ -42,8 +42,12 @@ public class UiDaiCom {
                     
                     break;
                 case 0:
+                    //lägg in en metod som skapats i daoimpl klassen som 
+                    //avslutar emf i en try catch. dvs. att den ska avsluta den 
+                    //enbart om det finns en dvs emf !=null.  
                     loop = false;
                     JPACRUD.loop=false;
+                    
                     break;
                 default:
                     DBUIConnection(ui.menu());

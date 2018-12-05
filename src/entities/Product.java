@@ -14,7 +14,8 @@ import javax.persistence.NamedQuery;
     @NamedQuery(name = "getAll", query = ("Select a from Product a")),
     @NamedQuery(name = "getByPriceRange", query = ("Select a from Product a where a.price between :min and :max")),
 
-})
+}) 
+//
 public class Product implements Serializable {
 
     @Id

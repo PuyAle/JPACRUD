@@ -1,8 +1,8 @@
 package run;
 
 import ui.UI;
-import uidaocom.UiDaiCom;
-
+import uidaocom.UiDaoCom;
+//
 public class JPACRUD {
 
     public static boolean loop = true;
@@ -10,7 +10,7 @@ public class JPACRUD {
     public static void main(String[] args) {
         
         while (loop){
-        UiDaiCom.DBUIConnection(UI.menu());
+        UiDaoCom.DBUIConnection(UI.menu());
         }
     }
 
