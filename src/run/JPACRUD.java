@@ -1,7 +1,7 @@
 package run;
 
 import ui.UI;
-import uidaocom.UiDaoCom;
+import menuswich.UiDaoCom;
 //
 public class JPACRUD {
 

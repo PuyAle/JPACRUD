@@ -1,5 +1,5 @@
 
-package uidaocom;
+package menuswich;
 import dao.ProductDAOImpl;
 import run.JPACRUD;
 import ui.UI;

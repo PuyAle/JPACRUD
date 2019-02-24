@@ -10,7 +10,6 @@ import entities.Product;
 public class ProductDAOImpl implements ProductDAO {
 
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
-    //  
 
     @Override
     public void create(String name, double price) {
@@ -28,6 +27,7 @@ public class ProductDAOImpl implements ProductDAO {
     public List<Product> getByName(String name) {
         EntityManager em = emf.createEntityManager();
 
+        //The query can be found in the entity class.
         Query query = em.createNamedQuery("getByName", Product.class);
         query.setParameter("name", "%" + name + "%");
         List<Product> list = query.getResultList();
@@ -38,6 +38,8 @@ public class ProductDAOImpl implements ProductDAO {
     @Override
     public List<Product> getByPriceRange(double min, double max) {
         EntityManager em = emf.createEntityManager();
+
+        //The query can be found in the entity class.
         Query q = em.createNamedQuery("getByPriceRange", Product.class);
         q.setParameter("min", min);
         q.setParameter("max", max);
@@ -63,7 +65,7 @@ public class ProductDAOImpl implements ProductDAO {
             p.setPrice(newPrice);
             em.getTransaction().commit();
             em.close();
-        }else{
+        } else {
             System.out.println("Product was not found");
         }
 
