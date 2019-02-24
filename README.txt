@@ -1,5 +1,5 @@
 The project is a simple Crud using JPA. 
-All the layers are separetade in diffrent package's. 
+All the layers are separated in diffrent packages. 
 
 In this project there is only one entity called Product. 
 The entity is used in the DAO package where the 
