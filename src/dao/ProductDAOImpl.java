@@ -9,7 +9,7 @@ import entities.Product;
 
 public class ProductDAOImpl implements ProductDAO {
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
+    public static EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
 
     @Override
     public void create(String name, double price) {
